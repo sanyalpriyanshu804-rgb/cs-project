@@ -1,0 +1,71 @@
+online-food-order/
+│
+├── templates/
+│   └── index.html
+│
+├── app.py
+└── database.sql
+
+
+After this we can improve it with:
+
+Better CSS form styling
+Login system
+Cart system
+Payment page
+Admin dashboard
+Order history
+Dark mode
+Search bar
+Real food images
+Responsive mobile design
+
+
+
+
+
+Project Context:
+
+This is a school project: an online food ordering demo. The project uses:
+- Python with Flask for backend
+- MySQL for database (two tables: customers and orders)
+- HTML/CSS (templates) for GUI
+- JavaScript for interactive features (Add-to-Cart with toast notifications)
+
+Current Setup:
+
+1. Database:
+   - Table `customers`: customer_id (AUTO_INCREMENT), name, gmail
+   - Table `orders`: order_id (AUTO_INCREMENT), customer_id (FK), ordered_items, total_bill, date
+2. Flask app (`app.py`) handles:
+   - Home page (`index.html`) showing 4 food items with Add-to-Cart buttons
+   - Cart page (`cart.html`) showing cart items and total bill
+   - Order confirmation page (`success.html`) with green tick image, ordered items, total bill, date
+   - Cart stored in Flask session
+   - Add-to-Cart uses JS with toast notifications (non-blocking)
+   - Go to Cart button on index page for navigating to cart
+3. Frontend:
+   - Templates in `templates/` folder: index.html, cart.html, success.html
+   - Simple, clean GUI (no hover effects)
+   - Toast notifications for Add-to-Cart instead of alerts
+   - Green tick image on success page
+4. Integration:
+   - Fully compatible with Flask routing
+   - Database interactions work via mysql-connector-python
+   - No Jinja loops in HTML; uses separate variables for cart items (cart1, cart2, etc.)
+
+Goal / What’s left or could be done:
+
+- Make project GitHub-ready for easy running on another computer (include requirements.txt, SQL setup file)
+- Optional: polish GUI or toast notification design
+- Optional: further features like quantity update in cart or remove items
+- Ensure the user can confidently explain how it works for school presentation
+
+Instructions:
+
+Whenever I paste this prompt, understand this is the **current project state** and I may ask you to:
+- Modify templates or Flask code
+- Add JS features
+- Make deployment-ready package
+- Explain how parts work
+- Help me prepare to present the project

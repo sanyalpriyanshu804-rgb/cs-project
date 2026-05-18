@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie's Hub - Order Success</title>
+<style>
+body { font-family: Arial; background:#f5f5f5; margin:0; padding:0; }
+header { background:#ff5722; color:white; padding:20px; text-align:center; }
+header h1 { margin:0; }
+.container { width:90%; max-width:600px; margin:50px auto; padding:30px; background:white; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); border-radius:10px; }
+h2 { color:#ff5722; margin-bottom:20px; }
+p { font-size:18px; margin:10px 0; }
+button { background:#ff5722; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; margin-top:20px; }
+button:hover { background:#e64a19; }
+footer { background:#222; color:white; text-align:center; padding:15px; margin-top:30px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Foodie's Hub</h1>
+</header>
+
+<div class="container">
+<!-- Green tick image -->
+<img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" style="width:100px; display:block; margin: 0 auto 20px;">
+
+<h2>Order Confirmed!</h2>
+<p>Thank you, <strong>{{ name }}</strong>!</p>
+<p>Your order has been successfully placed.</p>
+<p><strong>Ordered Items:</strong> {{ ordered_items }}</p>
+<p><strong>Total Bill:</strong> ₹{{ total_bill }}</p>
+<p><strong>Order Date:</strong> {{ date }}</p>
+
+<a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+</div>
+
+<footer>
+<p>© 2026 Foodie's Hub | CS Project</p>
+</footer>
+</body>
+</html>
