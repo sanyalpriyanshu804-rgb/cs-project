@@ -1,0 +1,19 @@
+CREATE TABLE customers (
+    customer_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    gmail VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (customer_id)
+);
+
+
+CREATE TABLE orders (
+    order_id INT NOT NULL AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    ordered_items TEXT NOT NULL,
+    total_bill DECIMAL(10,2) NOT NULL,
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (customer_id)
+        REFERENCES customers(customer_id)
+        ON DELETE CASCADE
+);
