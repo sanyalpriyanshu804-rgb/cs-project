@@ -9,7 +9,7 @@ app.secret_key = "supersecretkey"  # required for session
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="11223_11223",  # replace with your MySQL password
+    password="your password",  # replace with your MySQL password
     database="food_order_db"   # replace with your DB name
 )
 cursor = db.cursor()
