@@ -10,7 +10,7 @@ db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="your password",  # replace with your MySQL password
-    database="food_order_db"   # replace with your DB name
+    database="database name"   # replace with your DB name
 )
 cursor = db.cursor()
 
